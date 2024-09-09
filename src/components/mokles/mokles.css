@@ -1,0 +1,13 @@
+/* src/components/Mokles.css */
+.mokles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Cela fera en sorte que le contenu soit centré verticalement dans la page */
+  }
+  
+  .mokles-title {
+    color: red;
+    font-size: 36px;
+  }
+  
