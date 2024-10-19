@@ -15,18 +15,17 @@ const Become_an_agent = () => {
               fontFamily: "'Playfair Display', serif",
              
             }}>
-                Fulce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.
-              </p>
+      Restez informé de nos dernières nouveautés et offres exclusives en vous inscrivant à notre newsletter.              </p>
             </span>
             <button className="bg-white text-[#576D80] px-8 py-3 rounded-full lg:mt-0 mt-8 lg:ml-4" style={{
               fontFamily: "'Playfair Display', serif",
              
             }}>
-              Register Now
+            Inscrivez-vous maintenant
             </button>
           </div>
         </div>
-        <button className="bg-gradient-to-b from-[#fff] to-[#c0a26c] opacity-40 rounded-full h-20 w-20 cursor-auto absolute -top-6 right-20 z-10"></button>
+        {/* <button className="bg-gradient-to-b from-[#fff] to-[#c0a26c] opacity-40 rounded-full h-20 w-20 cursor-auto absolute -top-6 right-20 z-10"></button> */}
         {/* <button className="bg-gradient-to-r from-[#74cac5] to-[#26ada5] rounded-full h-20 w-20 cursor-auto absolute xl:bottom-10 bottom-20 lg:left-[19rem] left-200 z-10"></button> */}
       </div>
     </main>

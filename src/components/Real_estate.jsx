@@ -38,6 +38,14 @@ const Real_estate = () => {
 
   useEffect(() => {
     dispatch(getAllCarousels());
+    const timer = setTimeout(() => {
+      const produitsSection = document.getElementById("produits");
+      if (produitsSection) {
+        produitsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 10000); // 4000 millisecondes = 4 secondes
+
+    return () => clearTimeout(timer); // Nettoyage du timer lors du démontage
   }, [dispatch]);
 
   const images = useSelector((state) => state.carousel.carousels)
@@ -61,7 +69,7 @@ const Real_estate = () => {
   };
 
   return (
-    <main className="mb-12">
+    <main className="mb-12"  id="hero">
       <div className="relative w-full h-screen overflow-hidden">
         <Carousel
           responsive={responsive}
@@ -71,9 +79,9 @@ const Real_estate = () => {
           customDot={<CustomDot />}
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={1500}
           keyBoardControl={true}
-          transitionDuration={500}
+          transitionDuration={300}
           className="absolute inset-0 w-full h-full"
         >
           {/* {images.map((img, index) => (
@@ -109,7 +117,7 @@ const Real_estate = () => {
       </div>
       <div className="container mx-auto px-3 py-16">
         <span className="lg:flex items-end gap-x-60 lg:text-left text-center">
-          <button className="lg:block hidden bg-gradient-to-r from-[#7992d76b] to-[#eff9f9] rounded-full h-24 w-24 cursor-auto"></button>
+ 
           <p
             className="text-[#a5a5a5]"
             style={{

@@ -4,7 +4,7 @@ import { FaTruckMoving } from "react-icons/fa"; // Transport
 
 const Services = () => {
   return (
-    <main className="bg-[#f2f2f2] mt-20 lg:py-20">
+    <main className="bg-[#f2f2f2] mt-20 lg:py-20"  id="service">
       <div className="container mx-auto px-3 text-center">
         <p className="uppercase text-3xl py-8" style={{
               fontFamily: "'Playfair Display', serif",

@@ -30,8 +30,6 @@ const Home = () => {
         <Neighborhood_properties products={products} />
         <Latest_property />
         <Services />
-        {/* <LatestPropertyWithPagination products={products} /> */}
-        {/* <Team /> */}
         <Testimonials />
         <Become_an_agent />
       </main>

@@ -150,10 +150,11 @@ const Latest_property = () => {
               <div className="bg-gray-190 p-4 rounded-3xl">
                 <span className="flex flex-col gap-y-1 py-4">
                 {product.categorie === 'Premium' && (
-                  <button className="px-6 py-2 flex gap-x-2 items-center text-[#119bff] bg-[#d7eeff] rounded-full absolute top-15 right-5 ">
-                    <FaStar />
-                  Premium
-                  </button>
+                 <button className="px-2 py-0.5 flex gap-x-1 items-center text-[#119bff] bg-[#d7eeff] rounded-full absolute top-10 right-2 text-xs">
+                 <FaStar className="text-[8px]" />
+                 Premium
+               </button>
+                   
                    )}
                   <p className="text-2xl font-medium text-gray-700">{product.name}</p>
                   <p className="text-lg font-medium text-gray-700">{product.description}</p>

@@ -14,7 +14,7 @@ const Neighborhood_properties = ({ products }) => {
   const productsRef = useRef(null);
 
   useEffect(() => {
-    handleFilter('Tous'); // Sélectionne 'Tous' par défaut au chargement
+    // handleFilter('Tous'); // Sélectionne 'Tous' par défaut au chargement
   }, [products]);
 
   const handleFilter = (famille) => {
@@ -29,12 +29,14 @@ const Neighborhood_properties = ({ products }) => {
     productsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+
+
   const getActiveClass = (famille) => {
     return activeFamille === famille ? 'shadow-blue-500 shadow-lg cursor-pointer' : 'cursor-pointer';
   };
 
   return (
-    <main className="container mx-auto px-3 lg:pt-24">
+    <main className="container mx-auto px-3 lg:pt-24" id="produits">
       <p className="text-[#0c4f37] uppercase md:text-3xl text-lg" style={{
         fontFamily: "'Playfair Display', serif",
         letterSpacing: "0.2em",
@@ -53,7 +55,7 @@ const Neighborhood_properties = ({ products }) => {
           <img
             src="/assets/fer.png"
             alt="Fer"
-            className="rounded-3xl object-cover md:h-80 h-60 w-full"
+            className="rounded-3xl object-cover md:h-80 h-full w-full"
           />
           <span className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent rounded-3xl"></span>
           <span className="absolute md:bottom-8 bottom-4 md:left-8 left-4">
@@ -71,7 +73,7 @@ const Neighborhood_properties = ({ products }) => {
           <img
             src="/assets/ciment.png"
             alt="Ciment"
-            className="rounded-3xl object-cover md:h-80 h-40 w-full"
+            className="rounded-3xl object-cover md:h-80 h-full w-full"
           />
           <span className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent rounded-3xl"></span>
           <span className="absolute md:bottom-8 bottom-4 md:left-8 left-4">
@@ -89,7 +91,7 @@ const Neighborhood_properties = ({ products }) => {
           <img
             src="/assets/briquenew.jpg"
             alt="Brique"
-            className="rounded-3xl object-cover md:h-80 h-40 w-full"
+            className="rounded-3xl object-cover md:h-80 h-full w-full"
           />
           <span className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent rounded-3xl"></span>
           <span className="absolute md:bottom-8 bottom-4 md:left-8 left-4">

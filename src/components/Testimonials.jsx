@@ -4,7 +4,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 
 const Testimonials = () => {
   return (
-    <main className="container mx-auto px-3 lg:flex justify-between pt-20">
+    <main className="container mx-auto px-3 lg:flex justify-between pt-20"  id="temoi">
       <div className="lg:w-1/3 flex flex-col">
         <p className="text-[#0c4f37] uppercase md:text-xl text-lg" style={{
               fontFamily: "'Playfair Display', serif",
@@ -64,7 +64,7 @@ Nos clients apprécient la qualité exceptionnelle de nos produits et services.
             </div>
           </span>
         </div>
-        <button className="bg-gradient-to-r from-[#C0A26C] to-[#eff9f9] rounded-full h-16 w-16 cursor-auto absolute -top-6 -left-6"></button>
+        {/* <button className="bg-gradient-to-r from-[#C0A26C] to-[#eff9f9] rounded-full h-16 w-16 cursor-auto absolute -top-6 -left-6"></button> */}
       </div>
     </main>
   );

@@ -23,7 +23,10 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+    
+  }
+  , []);
+
 
   return (
     <nav className="fixed top-0 z-50 w-full">
@@ -64,19 +67,73 @@ const Navbar = () => {
           <div className="">
             <ul className="lg:flex hidden items-center gap-x-12 list-none lg:ml-auto lg:transform-none lg:translate-y-[-50%] lg:gap-y-0 gap-y-8">
               <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'text-[#ffff] hover:text-[#5badbb]'}`}>
-                <NavLink to="/">Acceuil</NavLink>
+              <NavLink
+    
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("hero");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  > Accueil</NavLink>
               </li>
               <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'text-[#ffff] hover:text-[#5badbb]'}`}>
-                <NavLink to="/">A Propos</NavLink>
+              <NavLink
+    
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("propos");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  > A Propos</NavLink>
               </li>
               <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'text-[#ffff] hover:text-[#5badbb]'}`}>
-                <NavLink to="/">Produits</NavLink>
+                  <NavLink
+    
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("produits");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >
+    Produits
+  </NavLink>
               </li>
               <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'text-[#ffff] hover:text-[#5badbb]'}`}>
-                <NavLink to="/">Services</NavLink>
+              <NavLink
+    
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("service");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >Services</NavLink>
               </li>
               <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'text-[#ffff] hover:text-[#5badbb]'}`}>
-                <NavLink to="/">Témoignages</NavLink>
+                  <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("temoi");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >Témoignages</NavLink>
+              </li>
+
+              <li className="py-2 flex font-medium items-center leading-snug ml-20">
+                <button className={`py-4 hoverBtn flex items-center gap-2 ${scrolling ? 'text-black' : 'text-[#001F75]'}`}>
+                  {/* <FaShoppingCart className="text-2xl" /> */}
+                  <CardIcon className="text-2xl"/>
+                </button>
               </li>
               
             </ul>
@@ -84,37 +141,88 @@ const Navbar = () => {
 
           <div
             className={
-              "lg:flex lg:items-center items-baseline lg:pt-0 pt-20 lg:h-auto h-screen lg:w-auto w-full justify-center" +
+              "lg:flex lg:items-center items-baseline lg:pt-0 pt-20 lg:h-auto h-[70vh] lg:w-auto w-full justify-center" +
               (navbarOpen ? " flex" : " hidden")
             }
           >
             <ul className="flex flex-col lg:flex-row items-center gap-x-4 list-none lg:ml-auto lg:transform-none lg:translate-y-[-50%] lg:gap-y-0 gap-y-8">
-              <div className="lg:hidden flex flex-col gap-y-8 items-center">
-                <li className="py-2 flex font-medium items-center leading-snug">
+            <div className="lg:hidden flex flex-col gap-y-8 items-center">
+                {/* <li className="py-2 flex font-medium items-center leading-snug">
                   <button className="bg-[#001F75] rounded-full px-4 py-1 hoverBtn flex items-center gap-2">
                     Home
                   </button>
+                </li> */}
+                <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'hover:text-[#5badbb]'}`}>
+                <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("hero");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  > Accueil</NavLink>
                 </li>
                 <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'hover:text-[#5badbb]'}`}>
-                  <NavLink to="/">About</NavLink>
+                <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("propos");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  > A Propos</NavLink>
                 </li>
                 <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'hover:text-[#5badbb]'}`}>
-                  <NavLink to="/">Listings</NavLink>
+                    <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("produits");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >
+    Produits
+  </NavLink>
                 </li>
                 <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'hover:text-[#5badbb]'}`}>
-                  <NavLink to="/">Services</NavLink>
+                <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("service");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >Services</NavLink>
                 </li>
                 <li className={`py-2 flex font-medium items-center leading-snug cinzel-font ${scrolling ? 'text-black' : 'hover:text-[#5badbb]'}`}>
-                  <NavLink to="/">Blogs</NavLink>
+                    <NavLink
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.getElementById("temoi");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+  >Témoignages</NavLink>
                 </li>
-              </div>
-
-              <li className="py-2 flex font-medium items-center leading-snug">
+                <li className="py-2 flex font-medium items-center leading-snug">
                 <button className={`py-4 hoverBtn flex items-center gap-2 ${scrolling ? 'text-black' : 'text-[#001F75]'}`}>
                   {/* <FaShoppingCart className="text-2xl" /> */}
                   <CardIcon className="text-2xl"/>
                 </button>
               </li>
+              </div>
+
+         
             </ul>
           </div>
         </div>
