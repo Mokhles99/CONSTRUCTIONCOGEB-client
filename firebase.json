@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "cogeb-construction",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
