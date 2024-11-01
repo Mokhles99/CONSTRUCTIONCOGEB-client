@@ -38,16 +38,28 @@ const Real_estate = () => {
 
   useEffect(() => {
     dispatch(getAllCarousels());
-    const timer = setTimeout(() => {
-      const produitsSection = document.getElementById("produits");
-      if (produitsSection) {
-        produitsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 10000); // 4000 millisecondes = 4 secondes
+    // const timer = setTimeout(() => {
+    //   const produitsSection = document.getElementById("produits");
+    //   if (produitsSection) {
+    //     produitsSection.scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }, 10000); // 4000 millisecondes = 4 secondes
 
-    return () => clearTimeout(timer); // Nettoyage du timer lors du démontage
+    // return () => clearTimeout(timer); // Nettoyage du timer lors du démontage
   }, [dispatch]);
 
+  
+  useEffect(() => {
+		const elementIds = ["hero", "propos", "produits", "service", "temoi"]
+		const scrollToElements = async () => {
+			for (const id of elementIds) {
+				const doc = document.getElementById(id)
+				doc.scrollIntoView({ behavior: "smooth" })
+				await new Promise(resolve => setTimeout(resolve, 3000))
+			}
+		}
+		scrollToElements()
+	}, [])
   const images = useSelector((state) => state.carousel.carousels)
  
   const imagesTwo = [
