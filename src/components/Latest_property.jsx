@@ -179,10 +179,10 @@ const Latest_property = () => {
           ))}
         </Carousel>
 
-        <div className="sm:hidden block ">
+        {/* <div className="sm:hidden block ">
           {filteredProducts && filteredProducts.map((product) => (
             <div className='pt-8' key={product._id}>
-              {/* <div className="relative h-80 sm:w-80">
+              <div className="relative h-80 sm:w-80">
                 <img
                   src={product.files[0].url}
                   alt={product.name}
@@ -192,7 +192,7 @@ const Latest_property = () => {
                   <FaStar />
                   Premium
                 </button>
-              </div> */}
+              </div>
               <span className="flex flex-col gap-y-1 py-4">
                 <p className="text-2xl font-medium">{product.name}</p>
                 <p className="text-lg font-medium">{product.description}</p>
@@ -204,7 +204,7 @@ const Latest_property = () => {
               View more products 
             </button>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );
