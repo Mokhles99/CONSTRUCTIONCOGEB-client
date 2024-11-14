@@ -1,0 +1,148 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "address":"COGEB, Avenue Hedi Nouira 4003 - Sousse - Tunisie"
+
+  },
+  "CartIcon": {
+    "cartTitle": "Cart",
+    "requestQuote": "Request Quote",
+    "userInfo": "User Information",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "phone": "Phone Number",
+    "message": "Message",
+    "send": "Send",
+    "success": {
+      "title": "Sent!",
+      "message": "Your quote request has been successfully sent."
+    },
+    "errors": {
+      "nameRequired": "Name required",
+      "surnameRequired": "Surname required",
+      "emailRequired": "Email required",
+      "invalidEmail": "Invalid email format: ****@****",
+      "phoneRequired": "Phone number required",
+      "invalidPhone": "Phone number should contain 8 digits",
+      "messageRequired": "Message required"
+    }
+  },
+"Real_estate": {
+  "group": "Our Group"
+},
+"Who_are_we": {
+  "title": "ABOUT US",
+  "heading": "Who Are We?",
+  "description": "Founded in 1980, COGEB specializes in the sale of construction materials and products. A leader in this field, it offers a variety of products to meet the needs of both professionals and individuals.",
+  "card1": "COGEB excels in the sale of construction materials and products. Combining quality and diversity, it partners with renowned brands to provide solutions tailored to all industry needs.",
+  "card2": "With its specialized showrooms and large storage capacity, COGEB offers a unique experience. Its skilled team guarantees personalized service, meeting the specific needs of each construction project."
+}, "Neighborhood_properties": {
+  "title": "OUR CATALOGS",
+  "subtitle": "Choose Your Desires",
+  "productTypes": {
+    "Fer": "IRON",
+    "Ciment": "CEMENT",
+    "Brique": "BRICK",
+    "Tous": "ALL PRODUCTS"
+  }
+},
+"products": {
+    "ourProducts": "Our Products",
+    "productSelection": "Product Selection",
+    "description": "Discover our wide range of products, carefully selected to meet all your needs",
+    "all": "All",
+    "addToCart": "Add to Cart"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "page": "Page",
+    "of": "of",
+    "next": "Next"
+  },
+  "confirmation": {
+    "productAdded": "Product added to cart"
+  },
+  "productDetails": {
+    "product": "Product",
+    "details": "Details"
+  },
+  "Latest_property": {
+    "recommended_title": "Most Recommended",
+    "premium_products": "Premium Products",
+    "premium_desc": "Discover our selection of premium products, carefully chosen for their exceptional quality",
+    "premium_label": "Premium",
+    "add_to_cart": "Add to"
+  },
+  "Services": {
+    "main_title": "Our Services",
+    "description": "We offer a range of customized services to meet your specific needs, ensuring exceptional quality and satisfaction",
+    "sale": {
+      "title": "Sale",
+      "description": "COGEB offers a wide range of construction products, including wood and sanitary items, to meet all needs."
+    
+ 
+},
+    "customer_advice": {
+      "title": "Customer Advice",
+      "description": "Our experts guide you in choosing the products that suit your projects, taking your needs and budget into account."
+    },
+    "transport": {
+      "title": "Transport",
+      "description": "COGEB ensures reliable transportation so that your products arrive on time and in good condition."
+    }
+  
+ 
+},
+"Testimonials": {
+  "testimonials_title": "Testimonials",
+  "header": "See what our clients are saying!",
+  "description": "Our clients appreciate the outstanding quality of our products and services.",
+  "quote": "Extremely satisfied with COGEB Group's services, whose expertise and professionalism exceeded all our expectations",
+  "client_name": "Cogeb Client"
+},  "Become_an_agent": {
+  "client_title": "COGEB Client.",
+  "description": "Stay informed of our latest updates and exclusive offers by subscribing to our newsletter.",
+  "signup_button": "Sign up now"
+},
+"FormDialog": {
+  "email_label": "Email Address",
+  "name_label": "Name & Surname",
+  "message_label": "Message",
+  "submit_button": "Send",
+  "alert_fill_fields": "Please fill in all fields.",
+  "success_title": "Success!",
+  "success_message": "Form successfully submitted!",
+  "success_button": "OK",
+  "error_title": "Error!",
+  "error_message": "Error submitting the form.",
+  "error_button": "OK"
+},
+"footer": {
+  "address": "COGEB, Avenue Hedi Nouira 4003 - Sousse - Tunisia",
+  "information": "Information",
+  "home": "Home",
+  "about": "About",
+  "products": "Products",
+  "services": "Services",
+  "usefulLinks": "Useful Links",
+  "quotation": "Quotation",
+  "privacy": "Privacy",
+  "support": "Support",
+  "findUs": "Find Us",
+  "terms": "Terms and Conditions"
+},
+"modal": {
+  "devisTitle": "Custom Quote Calculation",
+  "devisDescription": "At COGEB, we understand that each project is unique and requires a personalized approach. That's why we offer a custom quote calculation service to precisely meet your needs. Whether you are an individual, a construction professional, or an entrepreneur, we are here to provide you with detailed and accurate estimates. Our team of experts is available to guide you through the process of selecting materials, necessary quantities, and the most suitable options for your project. We guarantee competitive, transparent quotes delivered in a timely manner. Trust us to assist you in completing your projects, regardless of their scale or complexity.",
+  "confidentialiteTitle": "Privacy Policy",
+  "confidentialiteDescription": "At COGEB, protecting your personal data is a top priority. We are committed to respecting your privacy and handling your information with the utmost care. Our privacy policy explains in detail how we collect, use, and protect the information you provide us. Whether you contact us for a quote, sign up for our newsletter, or make a purchase, rest assured that your data is secure. We use advanced technologies to protect your information from unauthorized access and are committed to never selling, exchanging, or renting your personal data to third parties. Our commitment to privacy is a promise we uphold at every stage of our relationship with you.",
+  "supportTitle": "Support and Advice",
+  "supportDescription": "At COGEB, we believe that the success of your project relies on quality support. That's why we offer a comprehensive support service designed to address all your questions and provide you with the advice you need. Our support team consists of experienced professionals, ready to assist you at every stage of your project. Whether you need help choosing the most suitable materials, technical information, or advice on best practices, we are here to guide you. We are committed to providing fast, efficient, and personalized support to help you overcome any challenges you may encounter. At COGEB, your satisfaction is our priority, and we do everything we can to ensure the success of your projects."
+}
+  }
+  

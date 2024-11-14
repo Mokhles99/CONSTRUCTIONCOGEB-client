@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -8,9 +7,10 @@ import DialogContent from '@mui/material/DialogContent';
 import CircularProgress from '@mui/material/CircularProgress';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2'; // Importer SweetAlert2
-
+import { useTranslation } from 'react-i18next';
 
 export default function FormDialog({ open, onClose }) {
+  const { t } = useTranslation();
   const [formValues, setFormValues] = useState({
     email: '',
     from_name: '',
@@ -31,7 +31,7 @@ export default function FormDialog({ open, onClose }) {
     e.preventDefault();
 
     if (!formValues.email || !formValues.from_name || !formValues.message) {
-      alert('Veuillez remplir tous les champs.');
+      alert(t('FormDialog.alert_fill_fields')); // Traduction de l'alerte
       return; 
     }
 
@@ -43,10 +43,10 @@ export default function FormDialog({ open, onClose }) {
         console.log(result.text);
         setLoading(false); // Arrêter le spinner
         Swal.fire({
-          title: 'Succès!',
-          text: 'Formulaire soumis avec succès!',
+          title: t('FormDialog.success_title'), // Titre de succès
+          text: t('FormDialog.success_message'), // Message de succès
           icon: 'success',
-          confirmButtonText: 'OK'
+          confirmButtonText: t('FormDialog.success_button') // Bouton de confirmation
         });
         setFormValues({ email: '', from_name: '', message: ''});
         onClose();
@@ -54,10 +54,10 @@ export default function FormDialog({ open, onClose }) {
         console.log(error.text);
         setLoading(false); // Arrêter le spinner
         Swal.fire({
-          title: 'Erreur!',
-          text: "Erreur lors de l'envoi du formulaire.",
+          title: t('FormDialog.error_title'), // Titre d'erreur
+          text: t('FormDialog.error_message'), // Message d'erreur
           icon: 'error',
-          confirmButtonText: 'OK'
+          confirmButtonText: t('FormDialog.error_button') // Bouton de confirmation
         });
       });
   };
@@ -77,16 +77,12 @@ export default function FormDialog({ open, onClose }) {
       }}
     >
       <form onSubmit={handleSubmit}>
-        <div style={{ textAlign: 'center', padding: '20px', color: '#fff' }}>
-          {/* <Typography variant="h6" component="h2">
-            Contactez-nous
-          </Typography> */}
-        </div>
+        <div style={{ textAlign: 'center', padding: '20px', color: '#fff' }}></div>
         <DialogContent style={{ color: '#fff' }}>
           <TextField
             autoFocus
             name="email"
-            label="Adresse e-mail"
+            label={t('FormDialog.email_label')} // Traduction du libellé email
             type="email"
             fullWidth
             variant="outlined"
@@ -97,7 +93,7 @@ export default function FormDialog({ open, onClose }) {
           <TextField
             margin="dense"
             name="from_name"
-            label="Nom & Prénom"
+            label={t('FormDialog.name_label')} // Traduction du libellé nom
             type="text"
             fullWidth
             variant="outlined"
@@ -108,7 +104,7 @@ export default function FormDialog({ open, onClose }) {
           <TextField
             margin="dense"
             name="message"
-            label="Message"
+            label={t('FormDialog.message_label')} // Traduction du libellé message
             type="text"
             multiline
             rows={4}
@@ -131,7 +127,7 @@ export default function FormDialog({ open, onClose }) {
             }}
             disabled={loading} // Désactiver le bouton pendant le chargement
           >
-            {loading ? <CircularProgress size={24} style={{ color: '#C9961A' }} /> : 'Envoyer'}
+            {loading ? <CircularProgress size={24} style={{ color: '#C9961A' }} /> : t('FormDialog.submit_button')}
           </Button>
         </DialogActions>
       </form>

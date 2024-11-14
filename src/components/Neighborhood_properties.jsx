@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import LatestPropertyWithPagination from './Latest_property_pagination';
 
 const productTypeMapping = {
@@ -8,6 +9,7 @@ const productTypeMapping = {
 };
 
 const Neighborhood_properties = ({ products }) => {
+  const { t } = useTranslation();
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [activeFamille, setActiveFamille] = useState('Tous');
   const [activeTypes, setActiveTypes] = useState([]);
@@ -29,8 +31,6 @@ const Neighborhood_properties = ({ products }) => {
     productsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-
-
   const getActiveClass = (famille) => {
     return activeFamille === famille ? 'shadow-blue-500 shadow-lg cursor-pointer' : 'cursor-pointer';
   };
@@ -42,12 +42,12 @@ const Neighborhood_properties = ({ products }) => {
         letterSpacing: "0.2em",
         marginTop: "2rem"
       }}>
-        NOS CATALOGUES
+        {t('Neighborhood_properties.title')}
       </p>
       <h1 className="lg:text-4xl text-xl font-medium capitalize pt-3 pb-12" style={{
         fontFamily: "'Playfair Display', serif",
       }}>
-        Choisir vos désirs 
+        {t('Neighborhood_properties.subtitle')}
       </h1>
 
       <section className="grid md:grid-cols-7 grid-cols-2 md:gap-12 gap-4 pb-12">
@@ -64,7 +64,7 @@ const Neighborhood_properties = ({ products }) => {
               fontWeight: "bold",
               letterSpacing: "0.2em",
             }}>
-              FER
+              {t('Neighborhood_properties.productTypes.Fer')}
             </p>
           </span>
         </div>
@@ -82,7 +82,7 @@ const Neighborhood_properties = ({ products }) => {
               fontWeight: "bold",
               letterSpacing: "0.2em",
             }}>
-              CIMENT
+              {t('Neighborhood_properties.productTypes.Ciment')}
             </p>
           </span>
         </div>
@@ -100,7 +100,7 @@ const Neighborhood_properties = ({ products }) => {
               fontWeight: "bold",
               letterSpacing: "0.2em",
             }}>
-              BRIQUE
+              {t('Neighborhood_properties.productTypes.Brique')}
             </p>
           </span>
         </div>
@@ -118,7 +118,7 @@ const Neighborhood_properties = ({ products }) => {
               fontWeight: "bold",
               letterSpacing: "0.2em",
             }}>
-              TOUS LES PRODUITS
+              {t('Neighborhood_properties.productTypes.Tous')}
             </p>
           </span>
         </div>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import FormDialog from './FormDialog'; // Assurez-vous que le chemin vers FormDialog est correct
+import { useTranslation } from 'react-i18next';
 
 const Become_an_agent = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -18,24 +20,30 @@ const Become_an_agent = () => {
         <div className="flex flex-col items-center w-full lg:pt-0 pt-12 text-center">
           <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4">
             <span className="lg:text-left text-center">
-              <h1 className="lg:text-4xl text-3xl font-medium py-3 text-white" style={{
-                fontFamily: "'Playfair Display', serif",
-                letterSpacing: "0.1em",
-              }}>
-                Client COGEB.
+              <h1
+                className="lg:text-4xl text-3xl font-medium py-3 text-white"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  letterSpacing: "0.1em",
+                }}
+              >
+                {t("Become_an_agent.client_title")}
               </h1>
-              <p className="text-white text-sm lg:w-11/12" style={{
-                fontFamily: "'Playfair Display', serif",
-              }}>
-                Restez informé de nos dernières nouveautés et offres exclusives en vous inscrivant à notre newsletter.
+              <p
+                className="text-white text-sm lg:w-11/12"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                }}
+              >
+                {t("Become_an_agent.description")}
               </p>
             </span>
-            <button 
-              onClick={handleOpen} // Ouvre le modal au clic
-              className="bg-white text-[#576D80] px-8 py-3 rounded-full lg:mt-0 mt-8 lg:ml-4" 
+            <button
+              onClick={handleOpen}
+              className="bg-white text-[#576D80] px-8 py-3 rounded-full lg:mt-0 mt-8 lg:ml-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Inscrivez-vous maintenant
+              {t("Become_an_agent.signup_button")}
             </button>
           </div>
         </div>
