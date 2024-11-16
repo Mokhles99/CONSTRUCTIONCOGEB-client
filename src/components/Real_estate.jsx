@@ -21,17 +21,17 @@ const Real_estate = () => {
     dispatch(getAllCarousels());
   }, [dispatch]);
 
-  useEffect(() => {
-    const elementIds = ["hero", "propos", "produits", "service", "temoi"];
-    const scrollToElements = async () => {
-      for (const id of elementIds) {
-        const doc = document.getElementById(id);
-        doc.scrollIntoView({ behavior: "smooth" });
-        await new Promise(resolve => setTimeout(resolve, 3000));
-      }
-    };
-    scrollToElements();
-  }, []);
+  // useEffect(() => {
+  //   const elementIds = ["hero", "propos", "produits", "service", "temoi"];
+  //   const scrollToElements = async () => {
+  //     for (const id of elementIds) {
+  //       const doc = document.getElementById(id);
+  //       doc.scrollIntoView({ behavior: "smooth" });
+  //       await new Promise(resolve => setTimeout(resolve, 3000));
+  //     }
+  //   };
+  //   scrollToElements();
+  // }, []);
 
   const images = useSelector((state) => state.carousel.carousels);
   const imagesTwo = [
